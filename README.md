@@ -48,7 +48,8 @@
 ### Association
 - belongs_to :administrator
 - belongs_to :user
-- has_many :estimated_items
+- has_many :estimated_items, through: :estimates_items_tags
+- has_many :estimates_items_tags
 
 
 ## est_items
@@ -60,8 +61,17 @@
 
 ### Association
 - belongs_to :administrator
-- has_many :estimates
+- has_many :estimates, through: :estimates_items_tags
+- has_many :estimates_items_tags
 
 
 ## estimates_items_tags
 
+| Column       | Type   | Options     |
+| ------------ | ------ | ----------- |
+| estimates_id | string | null: false |
+| est_items_id | string | null: false |
+
+### Association
+- belongs_to :estimates
+- belongs_to :est_items
