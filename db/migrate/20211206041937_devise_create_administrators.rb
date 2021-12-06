@@ -4,6 +4,12 @@ class DeviseCreateAdministrators < ActiveRecord::Migration[6.0]
   def change
     create_table :administrators do |t|
       ## Database authenticatable
+      t.string :corporation_name,   null: false
+      t.string :zipcode,            null: false
+      t.string :address,            null: false
+      t.string :phone_number,       null: false
+      t.string :fax_number
+      t.string :corporation_code,   null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
