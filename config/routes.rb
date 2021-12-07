@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   }
 
   devise_for :administrators, controllers: {
-    sessions: 'users/sessions'
+    sessions: 'administrators/sessions'
   }
 
 end
