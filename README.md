@@ -1,6 +1,6 @@
 # README
 
-## administrator
+## administrators
 | Column             | Type   | Options                  |
 | ------------------ | ------ | ------------------------ |
 | corporation_name   | string | null: false unique: true |
