@@ -58,12 +58,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   private
+
   def user_params
     params.require(:user).permit(
       :name,
       :department,
       :position,
-      :phone_number,
+      :phone_number
     )
   end
 end

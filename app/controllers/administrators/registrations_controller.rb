@@ -59,6 +59,7 @@ class Administrators::RegistrationsController < Devise::RegistrationsController
   # end
 
   private
+
   def administrator_params
     params.require(:administrator).permit(
       # :email,
@@ -70,7 +71,7 @@ class Administrators::RegistrationsController < Devise::RegistrationsController
       :zipcode,
       :address,
       :fax_number,
-      :corporation_code,
+      :corporation_code
     )
   end
 end

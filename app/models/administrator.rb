@@ -5,5 +5,4 @@ class Administrator < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   attr_accessor :current_password
-  
 end
