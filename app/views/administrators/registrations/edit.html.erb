@@ -31,6 +31,36 @@
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
+      <div class="field">
+    <%= f.label :corporation_name %><br />
+    <%= f.text_field :corporation_name, autofocus: true, autocomplete: "corporation_name" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode, autofocus: true, autocomplete: "zipcode" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fax_number %><br />
+    <%= f.text_field :fax_number, autofocus: true, autocomplete: "fax_number" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :corporation_code %><br />
+    <%= f.text_field :corporation_code, autofocus: true, autocomplete: "corporation_code" %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Administrators::RegistrationsController < Devise::RegistrationsController
+  before_action :configure_permitted_parameters, if: :devise_controller?
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -14,15 +15,12 @@ class Administrators::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+  end
 
-  # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    current_administrator.update(administrator_params)
+  end
 
   # DELETE /resource
   # def destroy
@@ -59,4 +57,20 @@ class Administrators::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  private
+  def administrator_params
+    params.require(:administrator).permit(
+      # :email,
+      # :password,
+      # :password_confirmation,
+      # :current_password,
+      :phone_number,
+      :corporation_name,
+      :zipcode,
+      :address,
+      :fax_number,
+      :corporation_code,
+    )
+  end
 end

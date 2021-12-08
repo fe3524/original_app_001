@@ -1,11 +1,13 @@
 top#index<br>
 
 <h2>管理者</h2>
-<%= link_to 'ログイン', new_administrator_session_path %>
 <%= link_to '新規登録', new_administrator_registration_path %>
+<%= link_to 'ログイン', new_administrator_session_path %>
 <%= link_to 'ログアウト', destroy_administrator_session_path, method: :delete %>
+<%= link_to '編集', edit_administrator_registration_path %>
 <br>
 <h2>ユーザー</h2>
-<%= link_to 'ログイン', new_user_session_path %>
 <%= link_to '新規登録', new_user_registration_path %>
+<%= link_to 'ログイン', new_user_session_path %>
 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<%= link_to '編集', edit_user_registration_path %>
