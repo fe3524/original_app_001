@@ -14,14 +14,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # GET /resource/edit
   def edit
   end
 
-  # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    current_user.update(user_params)
+  end
 
   # DELETE /resource
   # def destroy
@@ -58,4 +56,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  private
+  def user_params
+    params.require(:user).permit(
+      :name,
+      :department,
+      :position,
+      :phone_number,
+    )
+  end
 end
