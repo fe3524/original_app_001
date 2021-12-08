@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   }
 
   root 'top#index'
-  resources :administrator_posts
-  resources :user_posts
+  resources :administrator
+  resources :user
 
 
 end
