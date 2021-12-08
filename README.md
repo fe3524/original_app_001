@@ -68,10 +68,10 @@
 
 ## estimates_items_tags
 
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| estimates_id | references | null: false, foreign_key: true |
-| est_items_id | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| estimate_id | references | null: false, foreign_key: true |
+| est_item_id | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :estimates

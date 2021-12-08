@@ -1,0 +1,2 @@
+class EstimatesItemsTag < ApplicationRecord
+end
