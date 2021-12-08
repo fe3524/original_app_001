@@ -25,6 +25,21 @@
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
   </div>
+  
+  <div class="field">
+    <%= f.label :department %><br />
+    <%= f.text_field :department, autofocus: true, autocomplete: "department" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_field :position, autofocus: true, autocomplete: "position" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
