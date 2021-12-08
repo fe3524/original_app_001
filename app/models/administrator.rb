@@ -5,4 +5,5 @@ class Administrator < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   attr_accessor :current_password
+  has_one_attached :image
 end

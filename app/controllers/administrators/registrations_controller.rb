@@ -62,16 +62,13 @@ class Administrators::RegistrationsController < Devise::RegistrationsController
 
   def administrator_params
     params.require(:administrator).permit(
-      # :email,
-      # :password,
-      # :password_confirmation,
-      # :current_password,
       :phone_number,
       :corporation_name,
       :zipcode,
       :address,
       :fax_number,
-      :corporation_code
+      :corporation_code,
+      :image
     )
   end
 end
