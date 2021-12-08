@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_06_042051) do
+ActiveRecord::Schema.define(version: 2021_12_08_080632) do
 
   create_table "administrators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "corporation_name", null: false
@@ -30,6 +30,21 @@ ActiveRecord::Schema.define(version: 2021_12_06_042051) do
     t.index ["reset_password_token"], name: "index_administrators_on_reset_password_token", unique: true
   end
 
+  create_table "estimates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "est_number", null: false
+    t.string "issue_date", null: false
+    t.string "exp_date", null: false
+    t.string "destination", null: false
+    t.string "title", null: false
+    t.string "delivery_date", null: false
+    t.text "offer_conditions", null: false
+    t.string "status_circular", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_estimates_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "department", null: false
@@ -46,4 +61,5 @@ ActiveRecord::Schema.define(version: 2021_12_06_042051) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "estimates", "users"
 end
