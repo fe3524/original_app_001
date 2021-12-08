@@ -1,0 +1,2 @@
+class EstItem < ApplicationRecord
+end
