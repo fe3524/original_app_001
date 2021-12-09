@@ -34,14 +34,14 @@
 
 
 ## estimates
-| Column           | Type       | Options     |
-| ---------------- | ---------- | ----------- |
-| est_number       | string     | null: false |
-| issue_date       | string     | null: false |
-| exp_date         | string     | null: false |
-| destination      | string     | null: false |
-| title            | string     | null: false |
-| delivery_date    | string     | null: false |
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| est_number       | string     | null: false                    |
+| issue_date       | string     | null: false                    |
+| exp_date         | string     | null: false                    |
+| destination      | string     | null: false                    |
+| title            | string     | null: false                    |
+| delivery_date    | string     | null: false                    |
 | offer_conditions | text       | null: false                    |
 | status_circular  | string     | null: false                    |
 | user_id          | references | null: false, foreign_key: true |
