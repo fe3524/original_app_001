@@ -19,14 +19,15 @@
 
 
 ## users
-| Column              | Type   | Options                  |
-| ------------------- | ------ | ------------------------ |
-| name                | string | null: false              |
-| department          | string | null: false              |
-| position            | string | null: false              |
-| phone_number        | string | null: false              |
-| email               | string | null: false unique: true |
-| encrypted_password  | string | null: false              |
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ | 
+| name                | string     | null: false                    |
+| department          | string     | null: false                    |
+| position            | string     | null: false                    |
+| phone_number        | string     | null: false                    |
+| email               | string     | null: false unique: true       |
+| encrypted_password  | string     | null: false                    |
+<!-- | administrator_id    | references | null: false, foreign_key: true | -->
 
 ### Association
 - belongs_to :administrator
