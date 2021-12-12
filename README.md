@@ -19,14 +19,15 @@
 
 
 ## users
-| Column              | Type   | Options                  |
-| ------------------- | ------ | ------------------------ |
-| name                | string | null: false              |
-| department          | string | null: false              |
-| position            | string | null: false              |
-| phone_number        | string | null: false              |
-| email               | string | null: false unique: true |
-| encrypted_password  | string | null: false              |
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ | 
+| name                | string     | null: false                    |
+| department          | string     | null: false                    |
+| position            | string     | null: false                    |
+| phone_number        | string     | null: false                    |
+| email               | string     | null: false unique: true       |
+| encrypted_password  | string     | null: false                    |
+<!-- | administrator_id    | references | null: false, foreign_key: true | -->
 
 ### Association
 - belongs_to :administrator
@@ -34,16 +35,17 @@
 
 
 ## estimates
-| Column           | Type   | Options     |
-| ---------------- | ------ | ----------- |
-| est_number       | string | null: false |
-| issue_date       | string | null: false |
-| exp_date         | string | null: false |
-| destination      | string | null: false |
-| title            | string | null: false |
-| delivery_date    | string | null: false |
-| offer_conditions | text   | null: false |
-| status_circular  | string | null: false |
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| est_number       | string     | null: false                    |
+| issue_date       | string     | null: false                    |
+| exp_date         | string     | null: false                    |
+| destination      | string     | null: false                    |
+| title            | string     | null: false                    |
+| delivery_date    | string     | null: false                    |
+| offer_conditions | text       | null: false                    |
+| status_circular  | string     | null: false                    |
+| user_id          | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :administrator
@@ -67,10 +69,10 @@
 
 ## estimates_items_tags
 
-| Column       | Type   | Options     |
-| ------------ | ------ | ----------- |
-| estimates_id | string | null: false |
-| est_items_id | string | null: false |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| estimate_id | references | null: false, foreign_key: true |
+| est_item_id | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :estimates

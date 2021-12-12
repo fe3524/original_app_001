@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   root 'top#index'
   resources :administrator
   resources :user
+  resources :post_pdf, only: :index
 
 
 end
