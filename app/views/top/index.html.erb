@@ -47,9 +47,9 @@
             <hr class="divider my-4"/>
           </div>
           <div class="col-lg-8 align-self-baseline">
-            <p class="text-white-75 font-weight-light mb-5">testets</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">管理者</a>　
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">ユーザー</a>
+            <p class="text-white-75 font-weight-light mb-5">ログイン</p>
+            <%= link_to('管理者', new_administrator_session_path, {class: "btn btn-primary btn-xl js-scroll-trigger"}) %>
+            <%= link_to('ユーザー', new_user_session_path, {class: "btn btn-primary btn-xl js-scroll-trigger"}) %>
           </div>
         </div>
       </div>
@@ -112,8 +112,8 @@
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
+                        <a class="portfolio-box" href="/assets/portfolio/fullsize/1.jpg" title="Project Name">
+                            <img class="img-fluid" src="/assets/portfolio/thumbnails/1.jpg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -121,8 +121,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
+                        <a class="portfolio-box" href="/assets/portfolio/fullsize/2.jpg" title="Project Name">
+                            <img class="img-fluid" src="/assets/portfolio/thumbnails/2.jpg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -130,8 +130,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
+                        <a class="portfolio-box" href="/assets/portfolio/fullsize/3.jpg" title="Project Name">
+                            <img class="img-fluid" src="/assets/portfolio/thumbnails/3.jpg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -139,8 +139,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
+                        <a class="portfolio-box" href="/assets/portfolio/fullsize/4.jpg" title="Project Name">
+                            <img class="img-fluid" src="/assets/portfolio/thumbnails/4.jpg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -148,8 +148,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
+                        <a class="portfolio-box" href="/assets/portfolio/fullsize/5.jpg" title="Project Name">
+                            <img class="img-fluid" src="/assets/portfolio/thumbnails/5.jpg" alt="..." />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -157,8 +157,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
+                        <a class="portfolio-box" href="/assets/portfolio/fullsize/6.jpg" title="Project Name">
+                            <img class="img-fluid" src="/assets/portfolio/thumbnails/6.jpg" alt="..." />
                             <div class="portfolio-box-caption p-3">
                                 <div class="project-category text-white-50">Category</div>
                                 <div class="project-name">Project Name</div>
@@ -259,7 +259,7 @@
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
@@ -272,12 +272,10 @@
 
 <h2>管理者</h2>
 <%= link_to '新規登録', new_administrator_registration_path %>
-<%= link_to 'ログイン', new_administrator_session_path %>
 <%= link_to 'ログアウト', destroy_administrator_session_path, method: :delete %>
 <%= link_to '編集', edit_administrator_registration_path %>
 <br>
 <h2>ユーザー</h2>
 <%= link_to '新規登録', new_user_registration_path %>
-<%= link_to 'ログイン', new_user_session_path %>
 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
 <%= link_to '編集', edit_user_registration_path %>
