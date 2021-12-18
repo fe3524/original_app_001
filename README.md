@@ -60,7 +60,7 @@
 | item_name  | string  | null: false |
 | unit_price | integer | null: false |
 | memo       | text    |             |
-
+|
 
 |
 
