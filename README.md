@@ -61,6 +61,7 @@
 | unit_price | integer | null: false |
 | memo       | text    |             |
 
+
 ### Association
 - belongs_to :administrator
 - has_many :estimates, through: :estimates_items_tags
