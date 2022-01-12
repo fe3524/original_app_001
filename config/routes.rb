@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'mies/show'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',
@@ -15,6 +16,5 @@ Rails.application.routes.draw do
   resources :administrator
   resources :user
   resources :post_pdf, only: :index
-
 
 end

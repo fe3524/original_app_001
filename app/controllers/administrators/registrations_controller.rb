@@ -10,10 +10,8 @@ class Administrators::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+  end
 
   def edit
   end
